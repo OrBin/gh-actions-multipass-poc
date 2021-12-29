@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - run: |
+          set -x
           sudo snap install multipass
           ps -elf | grep multipass
           ls -l /var/snap/multipass/
+          ls -l /var/snap/multipass/common
           ls -l /var/snap/multipass/common/multipass_socket
           sudo multipass launch impish
