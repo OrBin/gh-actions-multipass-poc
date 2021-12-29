@@ -29,9 +29,9 @@ jobs:
           ls -l /var/snap/multipass/common/multipass_socket || true
           
           echo -e "\nsyslog =>"
-          cat /var/log/syslog|grep multipass
+          cat /var/log/syslog | grep multipass
 
     - name: launch
       run: |
           echo -e "\nlaunch =>"
-          sudo multipass launch impish
+          sudo multipass launch impish || ((cat /var/log/syslog | grep multipass) && exit 1)
