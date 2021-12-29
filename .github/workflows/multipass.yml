@@ -4,7 +4,13 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - run: |
+    - name: Install Snapcraft
+      uses: samuelmeuli/action-snapcraft@v1
+
+    - name: Install LXD
+      uses: whywaita/setup-lxd@v1
+
+    - run: |
           sudo apt-get update # is it necessary?
           sudo apt-get install --reinstall resolvconf
           
