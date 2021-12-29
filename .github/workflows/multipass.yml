@@ -1,0 +1,9 @@
+name: Multipass PoC
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: |
+          sudo snap install multipass
+          multipass launch impish
