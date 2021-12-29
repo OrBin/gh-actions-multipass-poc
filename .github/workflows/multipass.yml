@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: |
           sudo snap install multipass
-          multipass launch impish
+          sudo multipass launch impish
