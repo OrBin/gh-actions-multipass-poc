@@ -26,7 +26,7 @@ jobs:
           ls -l /var/snap/multipass/common
           
           echo -e "\n/var/snap/multipass/common/multipass_socket =>"
-          ls -l /var/snap/multipass/common/multipass_socket
+          ls -l /var/snap/multipass/common/multipass_socket || true
           
           echo -e "\nsyslog =>"
           cat /var/log/syslog|grep multipass
