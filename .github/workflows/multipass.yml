@@ -31,5 +31,7 @@ jobs:
           echo -e "\nsyslog =>"
           cat /var/log/syslog|grep multipass
 
+    - name: launch
+      run: |
           echo -e "\nlaunch =>"
           sudo multipass launch impish
