@@ -16,17 +16,20 @@ jobs:
           
           sudo snap install multipass
           
-          echo "ps"
+          echo -e "\nps =>"
           ps -elf | grep multipass
           
-          echo "/var/snap/multipass/ =>"
+          echo -e "\n/var/snap/multipass/ =>"
           ls -l /var/snap/multipass/
           
-          echo "/var/snap/multipass/common =>"
+          echo -e "\n/var/snap/multipass/common =>"
           ls -l /var/snap/multipass/common
           
-          echo "/var/snap/multipass/common/multipass_socket =>"
+          echo -e "\n/var/snap/multipass/common/multipass_socket =>"
           ls -l /var/snap/multipass/common/multipass_socket
           
-          echo "launch"
+          echo -e "\nsyslog =>"
+          cat /var/log/syslog|grep multipass
+
+          echo -e "\nlaunch =>"
           sudo multipass launch impish
