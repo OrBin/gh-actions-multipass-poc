@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - run: |
+          sudo apt-get update # is it necessary?
+          sudo apt-get install --reinstall resolvconf
+          
           sudo snap install multipass
           
           echo "ps"
